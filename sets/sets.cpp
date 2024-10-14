@@ -1,5 +1,5 @@
 // Set is a data structure that tells us if an element is present or not
-// unordered collection of unique elements
+// ordered collection of unique elements
 
 
 #include<iostream>

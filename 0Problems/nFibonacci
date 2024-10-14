@@ -1,0 +1,32 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main(){
+
+    int num = 0;
+    vector<long long> result;
+    cin >> num;
+    result = printFibb(num);
+
+    for(auto i : result){
+        cout << i << " ";
+    }
+}
+
+
+vector<long long> printFibb(int n){
+    vector<long long> fibNums;
+    if(n<=1){
+        fibNums.push_back(n);
+        return fibNums;
+    }else{
+        fibNums.push_back(0);
+        fibNums.push_back(1);
+        for (int i = 2; i < n;i++){
+            fibNums[i] = fibNums[i-1] + fibNums[i - 2];
+        }
+        return fibNums;
+    }
+    return fibNums;
+}
